@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: kubectl apply -f online_shop_app.yml -n argocd   # Replace it with your forked repo
+    repoURL: https://github.com/im-vishal/argo-cd-demo.git   # Replace it with your forked repo
     targetRevision: main
     path: online_shop/
   destination:
