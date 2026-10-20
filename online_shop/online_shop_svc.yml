@@ -3,8 +3,11 @@ kind: Service
 metadata:
   name: online-shop-service
 spec:
+  type: NodePort          # uncomment for kind deployment
   selector:
     app: online-shop
   ports:
-  - port: 3000
-    targetPort: 3000
+    - name: http
+      port: 3000
+      targetPort: 3000
+      nodePort: 30080     # not needed in eks, uncomment for kind deployment
